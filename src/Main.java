@@ -1,8 +1,25 @@
 import java.time.LocalDateTime;
 import java.util.Scanner;
+class Stack{
+    int[] stck = new int[10];
+    int num=-1;
+    void put(int item){
+        if(num<9)
+            stck[++num]=item;
+
+    }
+
+}
 class Box {
-    double width;
-    double depth,height;
+    double width,depth,height;
+    Box(double width, double depth, double height){
+        this.width = width;
+        this.depth =depth;
+        this.height =height;
+    }
+    double mass(double po){
+        return po*width*depth*height;
+    }
 }
 public class Main {
     public static void main(String[] args) throws java.io.IOException {
@@ -90,9 +107,10 @@ public class Main {
                 }
             }
             System.out.println(sum);
-            Box box = new Box();
-            box.width = 10;
+            Box box = new Box(40,10,10);
             System.out.println(box.width);
+            int po=sc.nextInt();
+            System.out.println(box.mass(po));
         }
 
         //Connection con =
