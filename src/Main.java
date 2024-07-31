@@ -7,6 +7,11 @@ class Stack{
         if(num<9)
             stck[++num]=item;
     }
+    int pop(){
+        if (num>=0)
+            return stck[num--];
+        else return 0;
+    }
 
 }
 class Box {
@@ -15,6 +20,9 @@ class Box {
         this.width = width;
         this.depth =depth;
         this.height =height;
+    }
+    Box(double len){
+        width=height=depth=len;
     }
     double mass(double po){
         return po*width*depth*height;
@@ -25,12 +33,21 @@ public class Main {
         //alt+enter to suggest solution
         //shift+f9 to debug
         //ctrl+f8 to set breakpoint
+        Stack stk = new Stack();
+        for(int i=0; i<10;i++)
+            stk.put(i);
+        for(int i=0; i<10;i++)
+            System.out.println(stk.pop());
+
+
         for (int i=0; i<10; i++) {
             System.out.print(i+" ");
             if (i%2==0) continue;
             System.out.println("");
         }
         int a=130;
+        Box cube =new Box(7);
+        System.out.println(cube.mass(100));
         int[] arr = new int[10];
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
