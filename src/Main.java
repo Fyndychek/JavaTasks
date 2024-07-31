@@ -6,7 +6,6 @@ class Stack{
     void put(int item){
         if(num<9)
             stck[++num]=item;
-
     }
 
 }
