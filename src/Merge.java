@@ -3,5 +3,6 @@ public class Merge {
         for (int i = 1; i < 4; i++) {
             System.out.println(i);
         }
+
     }
 }
